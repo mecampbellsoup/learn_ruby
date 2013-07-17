@@ -5,10 +5,10 @@ def locate_vowel word
   array_of_letters = word.scan(/./)
   array_of_letters.each do |letter|
     if vowels.include? letter
-      unless array_of_letters[array_of_letters.index(letter)-1] == "q"
-        return array_of_letters.index(letter)
-      else
+      if array_of_letters[array_of_letters.index(letter)-1] == "q"
         return array_of_letters.index(letter) + 1
+      else
+        return array_of_letters.index(letter)
       end
     end
   end 
