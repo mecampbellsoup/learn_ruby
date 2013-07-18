@@ -9,9 +9,9 @@
 # This is (a stripped down version of) an actual useful concept: a function that runs a block of code and then tells you how long it took to run.
 
 require "performance_monitor"
-
+require 'pry'
 require "time"  # loads up the Time.parse method -- do NOT create time.rb!
-
+  
 describe "Performance Monitor" do
   before do
     @eleven_am = Time.parse("2011-1-2 11:00:00")
@@ -60,6 +60,7 @@ describe "Performance Monitor" do
     Time.stub(:now) { fake_time }
     average_time = measure(4) do
       fake_time += run_times.pop
+      #binding.pry
     end
     average_time.should == 6.5
   end
