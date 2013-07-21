@@ -40,7 +40,6 @@ describe "Timer" do
     end
   end
 
-
   # One way to implement the Timer is with a helper method.
   # Uncomment these specs if you want to test-drive that
   # method, then call that method from inside of time_string.
