@@ -7,6 +7,7 @@
 #
 
 require 'dictionary'
+require 'pry'
 
 describe Dictionary do
   before do
