@@ -34,6 +34,7 @@
 # * <http://www.calculator.org/rpn.aspx>
 #
 require "rpn_calculator"
+require 'pry'
 
 describe RPNCalculator do
 
