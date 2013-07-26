@@ -54,7 +54,7 @@ class RPNCalculator < Array
       if intermed_array.last.kind_of?(Integer)
         self.push(intermed_array.pop)
       else
-        self.method(operands_hash[intermed_array.pop]) #want this line to get the correct method from operands_hash and call it on self
+        eval("#{operands_hash[intermed_array.pop]}") #want this line to get the correct method from operands_hash and call it on self
       end
     end
     value
